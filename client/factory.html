@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoFish</title>
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="assets/bootstrap/js/popper.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/cats.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/animations.css">    
+    <link rel="stylesheet" href="assets/css/factory.css">
+    <link rel="stylesheet" href="assets/css/frontend.css">
+</head>
+
+<body id="body">
+    <!-- Start menu -->
+  <div id="menu"></div>
+    <!-- end menu -->
+    <div class="animation-wrapper">
+    <div class="particle particle-1"></div>
+
+    </div>
+    <div class="cursor"></div>
+    <div class="shadow-cursor"></div>
+    <div class="container p-5" style="margin-bottom: 10vh;">
+        <div align="center">
+        <h1 class="c-white">Fish Factory</h1>
+        <p class="c-white">Create your custom Fish</p>
+    </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 catBox m-3 light-b-shadow">
+                <div class="cat" id="newCat">
+                    <div class = container>
+                    <div id="fish" class="fish">
+                
+                        <div id="fishtop" class="fishtop"></div>
+                    
+                        <div id="side-fin" class="side-fin"></div>
+
+                        <div id="back-fin" class="back-fin">
+                            <div class="back-fin-detail"></div>
+                            <div class="back-fin-detail fin-detail2"></div>
+                        </div>
+
+                        <div id="hatdecoration" class="hat_decor">
+                            <div id="tophat" class="tophat"></div>
+                            <div id="cmhat" class="cmhat"></div>
+                        </div>
+                
+                        <div id="designdecoration" class="access_decor"> 
+                            <div id="bow" class="bow"></div>
+                            <div id="mask" class="mask"></div>
+                        </div>
+                
+                        <div class="eye"></div>
+                        <div class="eye eye-right"></div>
+                        <div class="eyebrow"></div>
+                        <div class="eyebrow eyebrow-right"></div>
+                        <div class="mouth"></div>
+                        <div class="mouthborder"></div>
+
+                        <label class="thorn1">V</label>
+                        <label class="thorn2">v</label>
+                        <label class="thorn3">V</label>
+                        <label class="thorn4">v</label>
+                        <label class="thorn5">V</label>
+                        <label class="thorn6">v</label>
+                        <label class="thorn7">V</label>
+                        <label class="thorn8">v</label>
+                        <label class="thorn9">V</label>
+                    </div>
+                    </div>
+                </div>
+                <br>
+                <div class="dnaBox" id="catDNA">
+                    <b>
+                        DNA:
+                        <!-- Colors -->
+                         <span id="dnabody"></span>
+                         <span id="dnabelly"></span>
+                         <span id="dnafin"></span>
+                         <span id="dnahat"></span>
+                         <span id="dnadesign"></span>
+                    </b>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 cattributes m-3 light-b-shadow">
+                <div id="catColors">
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Body</b><span class="m-3 badge badge-dark ml-2" id="bodycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Belly</b><span class="m-3 badge badge-dark ml-2" id="bellycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="bellycolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Fins</b><span class="m-3 badge badge-dark ml-2" id="fincode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="fincolor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Hat</b><span class="m-3 badge badge-dark ml-2" id="hatName"></span></label>
+                        <input type="range" min="1" max="3" class="form-control-range" id="hattype">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formControlRange"><b>Accessory</b><span class="m-3 badge badge-dark ml-2" id="designName"></span></label>
+                        <input type="range" min="1" max="3" class="form-control-range" id="designtype">
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <div class="container">
+                
+                <div class="btn-group">
+                    <button class="btn btn-primary ml-4 tsp-1 m-1 light-b-shadow" onclick="randomCat()"><b>Get Random Fish</b></button>
+                    <button class="btn btn-primary ml-2 tsp-1 m-1 light-b-shadow" onclick="defaultCat()"><b>Default Fish</b></button>
+                </div>
+                <div class="group-btn float-right">
+                    <button class="btn btn-success mr-4 tsp-1 m-1 light-b-shadow" onclick="createKitty()"><b>Create Fish</b></button>
+                </div>
+            </div>
+            <br>
+
+            </div>
+        </div>
+        </div>
+    </div>    
+
+    <footer align="left">
+        <p>Sean Kim 2022</p>
+    </footer>
+
+
+    <script src="assets/js/colors.js"></script>
+    <script src="assets/js/catFactory/catSettings.js"></script>
+    <script src="assets/js/catFactory/catFactory.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/components.js"></script>
+
+</body>
+
+</html>
