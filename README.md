@@ -1,14 +1,28 @@
-An interactive blockchain-powered platform where users can create, own, and trade unique digital fish on the Ethereum network.
+# MarketMind AI
 
-Inspired by CryptoKitties, DigiQuarium combines education and gamification to help users explore blockchain technology through a fun, hands-on experience. Users can mint their own fish NFTs, each with unique traits, and interact with the Ethereum blockchain in real-time.
+**Real-time Stock Market Analysis & AI-powered Predictions**
 
-Features
-Mint custom fish NFTs using Solidity smart contracts
+MarketMind AI is a stock market analysis tool that automatically fetches **real-time financial data** using GoogleFinance and imports it into **Google Sheets** for live tracking, historical analysis, and AI-driven market predictions.
 
-Real-time blockchain interactions via Web3.js
+---
 
-Full-stack decentralized application (DApp)
+## 🚀 Features
+- **Live Market Data**: Fetches up-to-date financial data using `GoogleFinance`.
+- **Dynamic Database**: Integrates with the **Google Sheets API** for seamless updates.
+- **AI Insights**: Uses the **Deepseek AI API** to analyze trends and generate intelligent predictions.
+- **Natural Language Market Analysis**: Converts market data into actionable insights using NLP.
 
-Visualize blockchain transactions with Ganache & Infura
+---
 
-Seamless wallet integration with MetaMask
+## 🛠 Tech Stack
+- **Languages**: Python, JavaScript
+- **APIs**: Google Sheets API, Deepseek AI API, GoogleFinance
+- **Tools**: Google Cloud Platform
+
+---
+
+## 📦 Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/MarketMindAI.git
+   cd MarketMindAI
